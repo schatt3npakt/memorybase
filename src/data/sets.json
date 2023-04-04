@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "category": 0,
+    "title": "Normal Memory",
+    "description": "Find pairs of identical card!",
+    "key": "default",
+    "icon": "🐱"
+  },
+  {
+    "id": 0,
+    "category": 0,
+    "title": "Associative Memory",
+    "description": "Find pairs of cards that belong together!",
+    "key": "associative",
+    "icon": "🐶"
+  }
+]

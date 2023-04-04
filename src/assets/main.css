@@ -1,0 +1,32 @@
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-color: #000000;
+  --theme-color-2: #00000050;
+}
+
+body {
+  background-color: #93c5fd;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+*:focus {
+  outline: 2px solid white, 2px solid #93c5fd;
+  outline-offset: 5px;
+}
+
+.memory-card--bg {
+  background-color: rgba(0, 0, 0, 0.1);
+}
