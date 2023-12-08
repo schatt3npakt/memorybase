@@ -44,3 +44,7 @@ export function playFanfareSound() {
 export function playHoverSound() {
   playSound('./sounds/hover.mp3', 0.15)
 }
+
+export function playThisCardSound(soundPath) {
+  playSound(soundPath)
+}

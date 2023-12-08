@@ -4,6 +4,7 @@ import {
   playCardLoseSound,
   playCardWinSound,
   playFanfareSound,
+  playThisCardSound
 } from "../services/AudioService";
 import JSConfetti from "js-confetti";
 
@@ -101,7 +102,7 @@ export const useGameStore = defineStore("game", {
     getIsIdle() {
       return this.state === appStates.idle;
     },
-    addSelectedCard(cardId, cardDescription) {
+    addSelectedCard(cardId, cardDescription, cardSound) {
       playCardFlipSound();
 
       if (this.selectedCards.has(cardId)) {
@@ -112,6 +113,9 @@ export const useGameStore = defineStore("game", {
 
       this.selectedCards.add(cardId);
       this.currentDescription = cardDescription;
+      if (cardSound !== undefined) {
+        playThisCardSound(cardSound);
+      }
 
       if (this.selectedCards.size === this.config.cardsPerPair) {
         this.checkForPair();

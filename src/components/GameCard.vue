@@ -50,7 +50,7 @@ window.addEventListener('resize', () => {
     class="flip-card w-16 h-16 sm:w-24 sm:h-24 xl:w-32 xl:h-32 mx-auto cursor-pointer font-extrabold hover:scale-105"
     :disabled="gameStore.getIsIdle() === false"
     :class="{ active: gameStore.selectedCards.has(item.id), 'hover:scale-150': preferenceStore.enableLargerScale}"
-    @click="gameStore.addSelectedCard(item.id, item.description)"
+    @click="gameStore.addSelectedCard(item.id, item.description, item?.sound)"
   >
     <div class="flip-card-inner text-xl md:text-3xl rounded-lg">
       <div
