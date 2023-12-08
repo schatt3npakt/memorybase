@@ -2,21 +2,29 @@
   {
     "id": 0,
     "title": "🐱",
-    "description": "Cat"
+    "description": "The cat",
+    "sound": "./sets/default/sounds/cat.mp3",
+    "image": "./sets/default/images/cat.jpg"
   },
   {
     "id": 1,
     "title": "🐶",
-    "description": "Dog"
+    "description": "The dog",
+    "sound": "./sets/default/sounds/dog.mp3",
+    "image": "./sets/default/images/dog.jpg"
   },
   {
     "id": 2,
     "title": "🐰",
-    "description": "Bunny"
+    "description": "The bunny",
+    "sound": "./sets/default/sounds/bunny.mp3",
+    "image": "./sets/default/images/bunny.jpg"
   },
   {
     "id": 3,
     "title": "🐹",
-    "description": "Hamster"
+    "description": "The hamster",
+    "sound": "./sets/default/sounds/hamster.mp3",
+    "image": "./sets/default/images/hamster.jpg"
   }
 ]

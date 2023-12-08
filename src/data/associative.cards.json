@@ -2,41 +2,41 @@
   {
     "id": 0,
     "title": "🐱",
-    "description": "Cat"
+    "description": "The cat"
   },
   {
     "id": 1,
     "title": "🐟",
-    "description": "Fish"
+    "description": "The fish"
   },
   {
     "id": 2,
     "title": "🐶",
-    "description": "Dog"
+    "description": "The dog"
   },
   {
     "id": 3,
     "title": "🦴",
-    "description": "Bone"
+    "description": "The bone"
   },
   {
     "id": 4,
     "title": "🐰",
-    "description": "Bunny"
+    "description": "The bunny"
   },
   {
     "id": 5,
     "title": "🥕",
-    "description": "Carrot"
+    "description": "The carrot"
   },
   {
     "id": 6,
     "title": "🐹",
-    "description": "Hamster"
+    "description": "The hamster"
   },
   {
     "id": 7,
     "title": "🥜",
-    "description": "Nuts"
+    "description": "The peanut"
   }
 ]
