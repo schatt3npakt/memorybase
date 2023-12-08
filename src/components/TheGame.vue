@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { nextTick, onMounted, ref } from 'vue'
 import router from '../router'
 import { useGameStore } from '../stores/game'
 import { usePreferenceStore } from '../stores/preference'
@@ -55,9 +55,14 @@ function revealCardsOnStart() {
   }, 2000)
 }
 
-function handleResetClick() {
+async function handleResetClick() {
   playSelectSound()
   gameStore.resetGame()
+
+  if (preferenceStore.revealCardsOnStartUp) {
+    await nextTick()
+    revealCardsOnStart()
+  }
 }
 
 onMounted(() => {
