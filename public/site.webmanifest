@@ -1,6 +1,7 @@
 {
     "name": "Memory!",
     "short_name": "Memory!",
+    "start_url": "https://schatt3npakt.github.io/memorybase/",
     "icons": [
         {
             "src": "./android-chrome-192x192.png",
