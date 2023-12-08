@@ -8,6 +8,10 @@ There are two types of memory supported:
 
 The memory games are configured inside of /src/data. Games that do not have an associated pairs.json are automatically normal memory games.
 
+## Demo
+
+Play the game at [https://schatt3npakt.github.io/memorybase/](https://schatt3npakt.github.io/memorybase/)
+
 ## Getting Started
 
 Make sure you are running the supported node version
