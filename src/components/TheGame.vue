@@ -81,7 +81,7 @@ onMounted(() => {
       ></GameCard>
     </div>
     <div class="mx-auto my-8 px-4" v-else>
-      <img class="mb-8 block mx-auto" :src="`/wingifs/${gameStore.winGifKey}.gif`" alt="" />
+      <img class="mb-8 block mx-auto" :src="`./wingifs/${gameStore.winGifKey}.gif`" alt="" />
 
       <PrimaryButton :message="'Play again?'" @click="handleResetClick()" />
     </div>
