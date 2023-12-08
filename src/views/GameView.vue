@@ -1,18 +1,19 @@
 <script setup>
-import TheGame from '../components/TheGame.vue'
-import MovingBackground from '../components/MovingBackground.vue'
-import router from '../router'
-import { playSelectSound } from '../services/AudioService'
-import PrimaryButton from '../components/PrimaryButton.vue'
-import { useGameStore } from '../stores/game'
-import TextBanner from '../components/TextBanner.vue'
+  import TheGame from "../components/TheGame.vue";
+  import MovingBackground from "../components/MovingBackground.vue";
+  import router from "../router";
+  import { playSelectSound } from "../services/AudioService";
+  import PrimaryButton from "../components/PrimaryButton.vue";
+  import { useGameStore } from "../stores/game";
+  import TextBanner from "../components/TextBanner.vue";
 
-const gameStore = useGameStore()
+  const gameStore = useGameStore();
 
-function handleBackClick() {
-  playSelectSound()
-  router.push('/')
-}
+  function handleBackClick() {
+    playSelectSound();
+    gameStore.currentDescription = null;
+    router.push("/");
+  }
 </script>
 
 <template>
@@ -20,7 +21,7 @@ function handleBackClick() {
     <MovingBackground :isReversed="true" />
 
     <TextBanner class="mt-16">
-      {{ gameStore.config.task }}
+      {{ gameStore.currentDescription || gameStore.config.task }}
     </TextBanner>
 
     <TheGame />
@@ -40,6 +41,9 @@ function handleBackClick() {
       </template>
     </TextBanner>
 
-    <PrimaryButton :message="'Back to home screen'" @click="handleBackClick()" />
+    <PrimaryButton
+      :message="'Back to home screen'"
+      @click="handleBackClick()"
+    />
   </main>
 </template>

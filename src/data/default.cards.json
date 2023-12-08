@@ -1,18 +1,22 @@
 [
   {
     "id": 0,
-    "title": "🐱"
+    "title": "🐱",
+    "description": "Cat"
   },
   {
     "id": 1,
-    "title": "🐶"
+    "title": "🐶",
+    "description": "Dog"
   },
   {
     "id": 2,
-    "title": "🐰"
+    "title": "🐰",
+    "description": "Bunny"
   },
   {
     "id": 3,
-    "title": "🐹"
+    "title": "🐹",
+    "description": "Hamster"
   }
 ]

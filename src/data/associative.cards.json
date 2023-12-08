@@ -1,34 +1,42 @@
 [
   {
     "id": 0,
-    "title": "🐱"
+    "title": "🐱",
+    "description": "Cat"
   },
   {
     "id": 1,
-    "title": "🐟"
+    "title": "🐟",
+    "description": "Fish"
   },
   {
     "id": 2,
-    "title": "🐶"
+    "title": "🐶",
+    "description": "Dog"
   },
   {
     "id": 3,
-    "title": "🦴"
+    "title": "🦴",
+    "description": "Bone"
   },
   {
     "id": 4,
-    "title": "🐰"
+    "title": "🐰",
+    "description": "Bunny"
   },
   {
     "id": 5,
-    "title": "🥕"
+    "title": "🥕",
+    "description": "Carrot"
   },
   {
     "id": 6,
-    "title": "🐹"
+    "title": "🐹",
+    "description": "Hamster"
   },
   {
     "id": 7,
-    "title": "🥜"
+    "title": "🥜",
+    "description": "Nuts"
   }
 ]
