@@ -70,7 +70,7 @@ window.addEventListener('resize', () => {
           :src="item.image"
           alt=""
         />
-        <p v-else class="block" :class="(item.title.length === 1) ? 'text-sm' : 'text-5xl'" alt="">{{ item.title }}</p>
+        <p v-else class="block" :class="(/\p{Extended_Pictographic}/u.test(item.title)) ? 'text-5xl' : 'text-2xl font-bold'" alt="">{{ item.title }}</p>
       </div>
       <div
         class="flip-card-back border-white border-4 shadow-md md:shadow-lg flex justify-center items-center rounded-lg text-white font-black"
@@ -86,6 +86,10 @@ window.addEventListener('resize', () => {
 <style scoped>
 .flip-card {
   perspective: 1000px;
+}
+
+p {
+  color: var(--theme-color);
 }
 
 .flip-card:disabled,

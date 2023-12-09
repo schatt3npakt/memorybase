@@ -8,11 +8,19 @@
     "icon": "🐱"
   },
   {
-    "id": 0,
+    "id": 1,
     "category": 0,
     "title": "Associative Memory",
     "description": "Find pairs of cards that belong together!",
     "key": "associative",
     "icon": "🐶"
+  },
+  {
+    "id": 2,
+    "category": 1,
+    "title": "Math Memory",
+    "description": "Match equations with their solutions!",
+    "key": "math",
+    "icon": "➕"
   }
 ]

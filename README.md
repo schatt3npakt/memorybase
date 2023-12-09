@@ -1,4 +1,4 @@
-# Memorybase for Vue
+# Memorybase
 
 Memorybase is a Vue3 project. It's a memory game wherein players select a memory theme and then find pairs of two to win.
 

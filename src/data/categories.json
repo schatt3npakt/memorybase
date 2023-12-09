@@ -3,5 +3,10 @@
     "id": 0,
     "title": "Animals",
     "color": "#fd9393"
+  },
+  {
+    "id": 1,
+    "title": "Math",
+    "color": "#4b5eb3"
   }
 ]
