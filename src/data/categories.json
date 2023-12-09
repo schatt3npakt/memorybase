@@ -8,5 +8,10 @@
     "id": 1,
     "title": "Math",
     "color": "#4b5eb3"
+  },
+  {
+    "id": 2,
+    "title": "Language",
+    "color": "#a24bb3"
   }
 ]

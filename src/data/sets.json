@@ -22,5 +22,13 @@
     "description": "Match equations with their solutions!",
     "key": "math",
     "icon": "➕"
+  },
+  {
+    "id": 3,
+    "category": 2,
+    "title": "Language Memory",
+    "description": "Find pairs of animals and learn their german and english names!",
+    "key": "language",
+    "icon": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
   }
 ]
