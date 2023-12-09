@@ -7,7 +7,9 @@ import { playHoverSound, playMaximizeSound, playMinimizeSound } from '../service
 import categories from '../data/categories.json'
 import MovingBackground from '../components/MovingBackground.vue'
 import StackSizeModal from '../components/StackSizeModal.vue';
+import { usePreferenceStore } from "../stores/preference"
 
+const preferenceStore = usePreferenceStore()
 const gameStore = useGameStore()
 const stackSizeModalIsOpen = ref(false);
 
@@ -58,8 +60,8 @@ window.addEventListener("keydown", (event) => {
 
 <template>
   <MovingBackground />
-  <TextBanner class="mt-16">Memory!</TextBanner>
-  <ul class="list-none my-8 grid md:grid-cols-2 gap-8">
+  <TextBanner v-if="preferenceStore.ui.showMainPageTitle" class="mt-16">{{preferenceStore.title}}</TextBanner>
+  <ul class="list-none my-8 grid md:grid-cols-2 gap-8" :class="(preferenceStore.ui.showMainPageTitle === false) ? 'pt-8' : ''">
     <li v-for="theme of themes" :key="theme.id">
       <button
         @mouseenter="playHoverSound()"

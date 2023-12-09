@@ -1,8 +1,14 @@
 {
+  "title": "Memory!",
   "revealCardsOnStartUp": true,
   "showGridSigns": false,
   "fitImageToCardDimensions": true,
   "enableLargerScale": false,
   "disableMovingBackgrounds": false,
-  "showLünkerButton": true
+  "showLünkerButton": true,
+  "ui": {
+    "showMainPageTitle": true,
+    "showOptions": true,
+    "showSoundButton": true
+  }
 }
