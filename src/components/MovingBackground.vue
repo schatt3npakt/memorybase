@@ -1,43 +1,59 @@
 <script setup>
-import { usePreferenceStore } from '../stores/preference';
+  import { usePreferenceStore } from "../stores/preference";
 
-const preferenceStore = usePreferenceStore();
+  const preferenceStore = usePreferenceStore();
 
-defineProps({
-  isReversed: {
-    default: false,
-    type: Boolean
-  }
-})
+  defineProps({
+    isReversed: {
+      default: false,
+      type: Boolean,
+    },
+  });
 </script>
 
 <template>
-  <div v-show="preferenceStore.disableMovingBackgrounds === false" class="background" :class="{ reverse: isReversed }"></div>
+  <div
+    class="background"
+    :class="{
+      reverse: isReversed,
+      animate: preferenceStore.disableMovingBackgrounds === false,
+    }"
+  ></div>
 </template>
 
 <style scoped>
-.background {
-  animation: scroll 120s linear infinite;
-  background: repeating-linear-gradient(-45deg, #fff, #fff 10px, #598dc8 10px, #93c5fd 20px);
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  mix-blend-mode: multiply;
-  opacity: 0.25;
-}
-
-.background.reverse {
-  transform: rotateZ(180deg) rotateY(180deg);
-}
-
-@keyframes scroll {
-  from {
-    background-position: 0 0;
+  .background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    background: repeating-linear-gradient(
+      var(--theme-color) 0vw,
+      var(--theme-color) 1vw,
+      var(--theme-color-2) 1vw,
+      var(--theme-color-2) 2vw
+    );
   }
-  to {
-    background-position: -2000px 0;
+
+  @media (prefers-reduced-motion: no-preference) {
+    .background.animate {
+      animation: scroll 240s linear infinite;
+    }
   }
-}
+
+  .background.reverse {
+    transform: rotateZ(180deg) rotateY(180deg);
+  }
+
+  @keyframes scroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0 -2000px;
+    }
+  }
 </style>

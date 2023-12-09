@@ -11,6 +11,8 @@
 
   function handleBackClick() {
     playSelectSound();
+    document.documentElement.style.setProperty("--theme-color", "#93c5fd");
+    document.documentElement.style.setProperty("--theme-color-2", "#93c5fd90");
     gameStore.currentDescription = null;
     router.push("/");
   }

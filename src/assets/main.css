@@ -4,12 +4,12 @@
 @tailwind utilities;
 
 :root {
-  --theme-color: #000000;
-  --theme-color-2: #00000050;
+  --theme-color: #93c5fd;
+  --theme-color-2: #93c5fd90;
 }
 
 body {
-  background-color: #93c5fd;
+  background-color: white;
 }
 
 #app {
