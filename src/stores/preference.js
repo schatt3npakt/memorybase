@@ -1,15 +1,9 @@
 import { defineStore } from 'pinia'
+import initialConfig from "../data/config.json"
 
 export const usePreferenceStore = defineStore('preference', {
   state: () => {
-    return {
-      revealCardsOnStartUp: true,
-      showGridSigns: false,
-      fitImageToCardDimensions: true,
-      enableLargerScale: false,
-      disableMovingBackgrounds: false,
-      showLünkerButton: true
-    }
+    return initialConfig
   },
 
   actions: {

@@ -88,10 +88,6 @@ window.addEventListener('resize', () => {
   perspective: 1000px;
 }
 
-p {
-  color: var(--theme-color);
-}
-
 .flip-card:disabled,
 .flip-card.disabled {
   pointer-events: none;
