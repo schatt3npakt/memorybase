@@ -13,5 +13,10 @@
     "id": 2,
     "title": "Language",
     "color": "#a24bb3"
+  },
+  {
+    "id": 3,
+    "title": "Groups",
+    "color": "#4bb36c"
   }
 ]

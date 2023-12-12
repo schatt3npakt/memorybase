@@ -30,5 +30,13 @@
     "description": "Find pairs of animals and learn their german and english names!",
     "key": "language",
     "icon": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+  },
+  {
+    "id": 4,
+    "category": 3,
+    "title": "Group memory",
+    "description": "Find groups of three cards!",
+    "key": "group",
+    "icon": "👥"
   }
 ]
