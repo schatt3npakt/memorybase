@@ -5,7 +5,6 @@ import { useGameStore } from '../stores/game'
 import TextBanner from '../components/TextBanner.vue'
 import { playHoverSound, playMaximizeSound, playMinimizeSound } from '../services/AudioService'
 import categories from '../data/categories.json'
-import MovingBackground from '../components/MovingBackground.vue'
 import StackSizeModal from '../components/StackSizeModal.vue';
 import { usePreferenceStore } from "../stores/preference"
 
