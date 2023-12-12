@@ -24,9 +24,10 @@ function stackSizeClickHandler () {
 </script>
 
 <template>
-  <div>
-    <div v-show="isOpen" class="modal-background"></div>
-    <div v-show="isOpen" class="modal p-4 w-full max-w-xl rounded-lg">
+  <transition name="fade">
+  <div v-if="isOpen">
+    <div class="modal-background"></div>
+    <div class="modal p-4 w-full max-w-xl rounded-lg">
       <div class="mx-auto max-w-xs">
         <label class="block font-bold text-xl text-center mb-6" for="stackSize"
           >How many pairs?</label
@@ -50,6 +51,7 @@ function stackSizeClickHandler () {
       <PrimaryButton @click="stackSizeClickHandler()" :message="'Let\'s go!'"></PrimaryButton>
     </div>
   </div>
+</transition>
 </template>
 
 <style>
@@ -102,5 +104,15 @@ input[type='range']:hover::-webkit-slider-thumb {
 /* Change the thumb color on active state */
 input[type='range']:active::-webkit-slider-thumb {
   background-color: #228b22;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
