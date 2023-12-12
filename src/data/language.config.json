@@ -1,4 +1,5 @@
 {
   "cardsPerPair": 2,
-  "task": "Find identical pairs!"
+  "task": "Find identical pairs!",
+  "backgroundImage": null
 }

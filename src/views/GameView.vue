@@ -5,15 +5,19 @@
   import { playSelectSound } from "../services/AudioService";
   import PrimaryButton from "../components/PrimaryButton.vue";
   import { useGameStore } from "../stores/game";
+  import { usePreferenceStore } from "../stores/preference";
   import TextBanner from "../components/TextBanner.vue";
 
   const gameStore = useGameStore();
+  const preferenceStore = usePreferenceStore(); 
 
   function handleBackClick() {
     playSelectSound();
     document.documentElement.style.setProperty("--theme-color", "#93c5fd");
     document.documentElement.style.setProperty("--theme-color-2", "#93c5fd90");
     gameStore.currentDescription = null;
+    gameStore.resetBackgroundImage();
+
     router.push("/");
   }
 </script>

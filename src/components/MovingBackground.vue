@@ -1,7 +1,9 @@
 <script setup>
-  import { usePreferenceStore } from "../stores/preference";
+  import { useGameStore } from "../stores/game";
+import { usePreferenceStore } from "../stores/preference";
 
   const preferenceStore = usePreferenceStore();
+  const gameStore = useGameStore();
 
   defineProps({
     isReversed: {
@@ -14,9 +16,10 @@
 <template>
   <div
     class="background"
+    :style="(gameStore.backgroundImage !== null) ?`background-image: url(${gameStore.backgroundImage})` : ''"
     :class="{
       reverse: isReversed,
-      animate: preferenceStore.disableMovingBackgrounds === false,
+      animate: preferenceStore.backgroundImage === null && preferenceStore.disableMovingBackgrounds === false,
     }"
   ></div>
 </template>
@@ -30,6 +33,7 @@
     left: 0;
     mix-blend-mode: multiply;
     opacity: 0.75;
+    background-position: center center;
     background: repeating-linear-gradient(
       var(--theme-color) 0vw,
       var(--theme-color) 1vw,

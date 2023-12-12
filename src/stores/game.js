@@ -7,6 +7,7 @@ import {
   playThisCardSound
 } from "../services/AudioService";
 import JSConfetti from "js-confetti";
+import initialAppConfig from "../data/config.json"
 
 const jsConfetti = new JSConfetti();
 
@@ -28,6 +29,7 @@ let themeConfig;
 export const useGameStore = defineStore("game", {
   state: () => {
     return {
+      backgroundImage: initialAppConfig.backgroundImage,
       currentDescription: null,
       cachedStackSize: 0,
       pairState: pairStates.idle,
@@ -45,12 +47,17 @@ export const useGameStore = defineStore("game", {
   },
 
   actions: {
+    resetBackgroundImage() {
+      this.backgroundImage = initialAppConfig.backgroundImage
+    },
     async setTheme(themeKey) {
       this.themeKey = themeKey;
       this.winGifKey = getRandomIntInRange(1, 1);
 
       cardsData = await import(`../data/${this.themeKey}.cards.json`);
       themeConfig = await import(`../data/${this.themeKey}.config.json`);
+
+      this.backgroundImage = themeConfig.backgroundImage
 
       try {
         pairsData = await import(`../data/${this.themeKey}.pairs.json`);
@@ -88,6 +95,7 @@ export const useGameStore = defineStore("game", {
         this.pairsData = [...pairsData.default];
       }
 
+      this.backgroundImage = themeConfig.backgroundImage;
       this.config = themeConfig.default;
       this.selectedCards = new Set();
     },
