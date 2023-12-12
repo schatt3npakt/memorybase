@@ -1,6 +1,5 @@
 <script setup>
   import TheGame from "../components/TheGame.vue";
-  import MovingBackground from "../components/MovingBackground.vue";
   import router from "../router";
   import { playSelectSound } from "../services/AudioService";
   import PrimaryButton from "../components/PrimaryButton.vue";
@@ -24,7 +23,6 @@
 
 <template>
   <main>
-    <MovingBackground :isReversed="true" />
 
     <TextBanner class="mt-16">
       {{ gameStore.currentDescription || gameStore.config.task }}
