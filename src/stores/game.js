@@ -54,13 +54,13 @@ export const useGameStore = defineStore("game", {
       this.themeKey = themeKey;
       this.winGifKey = getRandomIntInRange(1, 1);
 
-      cardsData = await import(`../data/${this.themeKey}.cards.json`);
-      themeConfig = await import(`../data/${this.themeKey}.config.json`);
+      cardsData = await import(`../data/sets/${this.themeKey}/cards.json`);
+      themeConfig = await import(`../data/sets/${this.themeKey}/config.json`);
 
       this.backgroundImage = themeConfig.backgroundImage
 
       try {
-        pairsData = await import(`../data/${this.themeKey}.pairs.json`);
+        pairsData = await import(`../data/sets/${this.themeKey}/pairs.json`);
         this.isAssociative = false;
       } catch {
         this.isAssociative = true;
